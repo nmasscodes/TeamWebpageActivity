@@ -145,4 +145,46 @@ button:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
+/* Logan's Moodboard Specifications */
+
+.moodboard2 {
+    display: none; /* Initially hide moodboard */
+    margin-top: 10px;
+    padding: 10px;
+    background: #035afc; /* Light Blue Background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+.moodboard2 h2 {
+    margin-top: 0;
+    color: #393c40; /* Gray text for moodboard title */
+}
+.moodboard2:hover {
+    transform: scale(1.02)
+}
+.moodboard2-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.moodboard2 p {
+    margin: 5px 0;
+    color: #393c40; /* Gray text for Moodboard Paragraphs */
+    text-align: center;
+}
+.moodboard2 img {
+    transition: transform 0.2s;
+}
+.moodboard2 img:hover {
+    transform: scale(1.05)
+}
+.moodboard2 a {
+    text-decoration: none; /* Remove underline */
+}
+.moodboard2 a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 
