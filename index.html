@@ -4,176 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Bio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #2e2e2e; /* Dark gray background */
-            margin: 0;
-            padding: 0;
-            color: #f0f0f0; /* Light text color */
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .card {
-            background: #3c3c3c; /* Darker card background */
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            margin: 10px;
-            padding: 15px; /* Reduced padding */
-            flex: 1 1 calc(30% - 40px);
-            text-align: center;
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        h2 {
-            margin: 0 0 10px;
-        }
-        .bio {
-            display: none; /* Initially hide the bio section */
-            margin-top: 10px;
-            color: #ccc; /* Light gray text */
-        }
-        button {
-            background: #007BFF; /* Blue button */
-            color: white;
-            border: none;
-            padding: 8px 12px; /* Reduced button padding */
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-
-
-        /* Sean's Moodboard Specifications*/
-        .moodboard {
-            display: none; /* Initially hide the moodboard */
-            margin-top: 10px;
-            padding: 10px; /* Reduced padding */
-            background: #24292e; /* Dark background similar to GitHub */
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            transition: transform 0.2s;
-        }
-        .moodboard:hover {
-            transform: scale(1.02);
-        }
-        .moodboard h2 {
-            margin-top: 0; /* No margin on top */
-            color: #58a6ff; /* Bright blue for moodboard title (GitHub style) */
-        }
-        .moodboard-content {
-            display: flex; /* Flexbox for layout */
-            align-items: center; /* Center align items vertically */
-            justify-content: center; /* Center items horizontally */
-            gap: 50px; /* Space between items */
-        }
-        .moodboard img {
-            width: 80%; /* Responsive image size */
-            max-width: 150px; /* Limit image size */
-            border: 2px solid #007BFF; /* Blue border around images */
-            border-radius: 5px;
-            transition: transform 0.2s;
-        }
-        .moodboard img:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
-        }
-        .moodboard p {
-            margin: 5px 0;
-            color: #f0f0f0; /* Light grey text for moodboard paragraphs */
-            text-align: center; /* Center text for consistency */
-        }
-        .moodboard a {
-            color: #58a6ff; /* Bright blue for links */
-            text-decoration: none; /* Remove underline */
-        }
-        .moodboard a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to External CSS -->
 </head>
 <body>
+    <header>
+        <h1>Meet Our Team</h1>
+    </header>
 
-<header>
-    <h1>Meet Our Team</h1>
-</header>
+    <div class="container">
+        <div class="card"> <!-- Noah's Card -->
+            <img src="img/IMG_3718.jpg" alt="Noah Massey" height=175 width="150">
+            <h2>Noah Massey</h2>
+            <p>Software Developer</p>
+            <button onclick="toggleBio('bio1', 'moodboard1')">Show Bio</button>
+            <p id="bio1" class="bio">Noah is a senior at UNCC, studying Mathematics with a minor in Software Development!</p>
 
-<div class="container">
-    <div class="card">
-        <h2>Noah Massey</h2>
-        <p>Frontend Developer</p>
-        <button onclick="toggleBio('bio1', 'moodboard1')">Show Bio</button>
-        <p id="bio1" class="bio">Noah is a skilled frontend developer with 5 years of experience in creating responsive web applications.</p>
-    </div>
-    <div class="card">
-        <h2>Jane Smith</h2>
-        <p>Backend Developer</p>
-        <button onclick="toggleBio('bio2', 'moodboard2')">Show Bio</button>
-        <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
-    </div>
-    <div class="card">
-        <h2>Emily Johnson</h2>
-        <p>UI/UX Designer</p>
-        <button onclick="toggleBio('bio3', 'moodboard3')">Show Bio</button>
-        <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
-    </div>
-
-
-
-    <div class="card"> <!-- Sean's card -->
-        <img src="img/IMG_2807_Copy.JPEG" height="175" width="150"/>
-        <h2>Sean Saturley</h2>
-        <p>Software Developer</p>
-        <button onclick="toggleBio('bio4', 'moodboard')">Show Bio</button>
-        <p id="bio4" class="bio">Sean is a Junior at UNCC with a major in Networking & Systems.</p>
-
-        <!-- Moodboard Section -->
-        <div id="moodboard" class="moodboard">
-            <h2>My Moodboard</h2>
-            <div class="moodboard-content">
-                <img src="img/rat-spin.gif" alt="Left GIF" class="moodboard-gif"/>
-                <div class="moodboard-center">
-                    <img src="img/jth.jpg" alt="Jason Thor Hall"/>
-                    <p>Inspiration: Jason Thor Hall (PirateSoftware)</p>
-                    <img src="img/viktor_meme.JPEG" alt="Coding Meme">
-                    <p>Typical Night of Coding:</p>
-                    <p>GitHub: <a href="https://github.com/SeanSaturley-UNCC" target="_blank">https://github.com/SeanSaturley-UNCC</a></p>
+            <!-- Noah's Moodboard -->
+            <div id="moodboard1" class="moodboard1">
+                <h2>My Moodboard</h2>
+                <div class="moodboard1-content">
+                    <div class="moodboard1-center">
+                        <img src="img/naruto_coding.png" height=180 width=180>
+                        <p>Inspiration: Naruto Uzumaki (Hokage/Coding Expert)</p>
+                        <img src="img/elonmusk.jpeg" alt="Elon Musk" height="180" width="180" class="moodboard1-border">
+                        <p>All jokes aside, my inspiration is Elon Musk.</p>
+                        <p>Github: <a href="https://github.com/nmasscodes" target="_blank">https://github.com/nmasscodes</a></p>
+                    </div>
                 </div>
-                <img src="img/rat-spin.gif" alt="Right GIF" class="moodboard-gif"/>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Jane Smith</h2>
+            <p>Backend Developer</p>
+            <button onclick="toggleBio('bio2', 'moodboard2')">Show Bio</button>
+            <p id="bio2" class="bio">Jane is a backend developer specializing in server-side logic and database management.</p>
+        </div>
+
+        <div class="card">
+            <h2>Emily Johnson</h2>
+            <p>UI/UX Designer</p>
+            <button onclick="toggleBio('bio3', 'moodboard3')">Show Bio</button>
+            <p id="bio3" class="bio">Emily is a UI/UX designer with a passion for creating user-friendly interfaces.</p>
+        </div>
+
+        <div class="card"> <!-- Sean's card -->
+            <img src="img/IMG_2807_Copy.JPEG" height="175" width="150"/>
+            <h2>Sean Saturley</h2>
+            <p>Software Developer</p>
+            <button onclick="toggleBio('bio4', 'moodboard')">Show Bio</button>
+            <p id="bio4" class="bio">Sean is a Junior at UNCC with a major in Networking & Systems.</p>
+
+            <!-- Moodboard Section -->
+            <div id="moodboard" class="moodboard">
+                <h2>My Moodboard</h2>
+                <div class="moodboard-content">
+                    <img src="img/rat-spin.gif" alt="Left GIF" class="moodboard-gif"/>
+                    <div class="moodboard-center">
+                        <img src="img/jth.jpg" alt="Jason Thor Hall"/>
+                        <p>Inspiration: Jason Thor Hall (PirateSoftware)</p>
+                        <img src="img/viktor_meme.JPEG" alt="Coding Meme">
+                        <p>Typical Night of Coding:</p>
+                        <p>GitHub: <a href="https://github.com/SeanSaturley-UNCC" target="_blank">https://github.com/SeanSaturley-UNCC</a></p>
+                    </div>
+                    <img src="img/rat-spin.gif" alt="Right GIF" class="moodboard-gif"/>
+                </div>
             </div>
         </div>
 
     </div>
-
-</div>
-
-<script>
-    function toggleBio(bioId, moodboardId) {
-        const bio = document.getElementById(bioId);
-        const moodboard = document.getElementById(moodboardId);
-        if (bio.style.display === "none" || bio.style.display === "") {
-            bio.style.display = "block";
-            moodboard.style.display = "block"; // Show moodboard
-        } else {
-            bio.style.display = "none";
-            moodboard.style.display = "none"; // Hide moodboard
-        }
-    }
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
