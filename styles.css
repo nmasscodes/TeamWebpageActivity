@@ -198,6 +198,53 @@ button:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
+
+/* Jacob's Moodboard Specifications */
+
+.moodboard3 {
+    display: none; /* Initially hide moodboard */
+    margin-top: 10px;
+    padding: 10px;
+    background: #da0d0d; /* Orange background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+.moodboard3 h2 {
+    margin-top: 0;
+    color: #300034; /* Black text for moodboard title */
+}
+.moodboard3:hover {
+    transform: scale(1.02)
+}
+.moodboard3-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+    gap: 50px; /* Space between items */
+}
+.moodboard3 p {
+    margin: 5px 0;
+    color: #000000; /*Black text for moodboard paragraphs */
+    text-align: center;
+}
+.moodboard3 img {
+    transition: transform 0.2s;
+}
+.moodboard3-border {
+    border: 2px solid #000000; /* Black Border */
+    border-radius: 5px;
+}
+.moodboard3 img:hover {
+    transform: scale(1.05)
+}
+.moodboard3 a {
+    text-decoration: none; /* Remove underline */
+}
+.moodboard3 a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* CSS for Navbar */
 
 .navbar {
